@@ -134,6 +134,52 @@ On choisit généralement entre les deux selon le critère suivant:
 - Boucle for: lorsque le nombre des itérations est connu.
 - Boucle while: lorsque le nombre des itérations est inconnu.
 
+### Mots clés
+
+Les mots clés `break` et `continue` permettent de contrôler le comportement d'une boucle.
+
+- `break` permet de sortir de la boucle.
+- `continue` permet de passer à l'itération suivante.
+
+```c
+{
+    int i = 0;
+    while (i < 5) {
+        if (i == 3) {
+            break;
+        }
+        printf("%d", i);
+        i++;
+    }
+    printf("END");
+}
+```
+```
+> 012END
+```
+
+> Lorsque i vaut 3, la boucle s'arrête. On n'affiche donc que les nombres de 0 à 2.
+
+---
+
+```c
+{
+    int i = 0;
+    while (i < 5) {
+        if (i == 3) {
+            continue;
+        }
+        printf("%d", i);
+        i++;
+    }
+    printf("END");
+}
+```
+```
+> 0124END
+```
+> Lorsque i vaut 3, la boucle passe à l'itération suivante. Le nombre 3 n'est donc pas affiché.
+
 ## Pour s'entraîner:
 1. Écrire un programme qui fait la somme des 10 premiers nombres entiers positifs
 
